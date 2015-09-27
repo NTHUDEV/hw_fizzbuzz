@@ -13,7 +13,7 @@ def fizzbuzz(num, &func)
   result_arr = (1..num).map { |a| fzbz_helper(a) }
 
   if func
-    yield result_arr
+    result_arr.each { |a| yield a }
   else
     result_arr
   end
